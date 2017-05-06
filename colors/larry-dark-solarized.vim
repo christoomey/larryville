@@ -115,6 +115,5 @@ highlight markdownHeadingDelimiter ctermfg=4
 highlight markdownH1 ctermfg=126
 highlight Folded term=NONE cterm=NONE gui=NONE
 highlight Folded ctermfg=97
-highlight Folded ctermbg=197
-
+highlight Folded ctermbg=234
 highlight asciiDiagram ctermfg=87
