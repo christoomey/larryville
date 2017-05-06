@@ -114,6 +114,7 @@ highlight qfFileName ctermfg=213
 highlight markdownHeadingDelimiter ctermfg=4
 highlight markdownH1 ctermfg=126
 highlight Folded term=NONE cterm=NONE gui=NONE
-highlight Folded ctermfg=244
+highlight Folded ctermfg=97
+highlight Folded ctermbg=197
 
 highlight asciiDiagram ctermfg=87
