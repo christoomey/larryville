@@ -107,12 +107,13 @@ hi javascriptstrings guifg=#e2e4e5 guibg=NONE guisp=NONE gui=NONE ctermfg=254 ct
 hi htmlstring guifg=#e2e4e5 guibg=NONE guisp=NONE gui=NONE ctermfg=254 ctermbg=NONE cterm=NONE
 hi phpstringsingle guifg=#e2e4e5 guibg=NONE guisp=NONE gui=NONE ctermfg=254 ctermbg=NONE cterm=NONE
 
-
 highlight Normal ctermfg=214
 highlight normal ctermfg=214
 highlight Delimiter ctermfg=214
 highlight qfFileName ctermfg=213
 highlight markdownHeadingDelimiter ctermfg=4
 highlight markdownH1 ctermfg=126
-hi Folded term=NONE cterm=NONE gui=NONE
-hi Folded ctermfg=244
+highlight Folded term=NONE cterm=NONE gui=NONE
+highlight Folded ctermfg=244
+
+highlight asciiDiagram ctermfg=87
