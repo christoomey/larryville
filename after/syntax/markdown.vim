@@ -1,8 +1,12 @@
 syntax match asciiDiagram /\v[│┌─┐┬└┘┴┤┼├]/
-syntax match LarryAsteric /\*/
-" syn region itemComplete   start="^\* "  end="$" keepend contains=itemCause
-"
-syn region itemComplete   start="^\* "  end="$" keepend contains=itemCause
+" syntax match LarryAsteric /\*/
+syntax match LarryMultiIndent /\s\s\s\s\s-/
+" syntax match astericLine /^\*\zs*ss/
 
-syn region itemDash   start="^\-"  end=" " keepend contains=itemCause
-1match larryTilde "[\^\~\^\*]"
+syn region astericLine start="\(\* \)\@<=.*" end="$" keepend contains=itemCause
+
+syn region microProject   start="^\*"  end=" " keepend contains=itemCause
+
+
+syn region itemDash start="^\-"  end=" " keepend contains=itemCause
+" syn region itemMultiIndent start="^      \-"  end=" " keepend contains=item Cause
