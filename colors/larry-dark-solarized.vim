@@ -157,7 +157,19 @@ highlight htmlBold ctermbg=NONE
 " }}}
 " R {{{
 
-highlight rDollar ctermfg=126
+highlight rDollar ctermfg=32
+highlight rBrackets ctermfg=23
+highlight rParen ctermfg=125
+highlight rCurly ctermfg=166
+highlight rAssign ctermfg=28
+highlight rNumber ctermfg=32
+highlight rFloat ctermfg=32
+highlight rDelimiter ctermfg=91
+highlight rString ctermfg=30
+highlight rType ctermfg=166
+" highlight rQuote ctermfg=166
+highlight rOperator ctermfg=32
+highlight rKeyword ctermfg=166
 
 " }}}
 " Python {{{
