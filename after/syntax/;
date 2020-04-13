@@ -1,9 +1,0 @@
-syntax match asciiDiagram /\v[│┌─┐┬└┘┴┤┼├]/
-syntax match LarryAsteric /\*/
-" syn region itemComplete   start="^\* "  end="$" keepend contains=itemCause
-
-" syn region microProject   start="(?<=\*).*"  end="$" keepend contains=itemCause
-syn region microProject   start="^\* "  end="$" keepend contains=itemCause
-
-syn region itemDash start="^\-"  end=" " keepend contains=itemCause
-syn region itemMultiIndent start="^\s\s\s\s\s \-"  end=" " keepend contains=itemCause
