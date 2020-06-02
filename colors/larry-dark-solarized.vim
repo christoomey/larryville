@@ -1,42 +1,70 @@
 "" vim:fdm=marker
 
-"" background {{{
+"" Color {{{
 
-"" Vim color file - SolarizedDark - Modified for Larry
-"" Augmented with Larr specific changes
+"  Colours are light’s suffering and joy.
+"      ~ Goethe
 
-"" }}}
-"" general {{{
-
-" set t_Co=256
+" pink = #af005f
+"SOLARIZED HEX     TERMCOL  
+"--------- ------- -------  
+"base03    #002b36 brblack  
+"base02    #073642 black    
+"base01    #586e75 brgreen  
+"base00    #657b83 bryellow 
+"base0     #839496 brblue   
+"base1     #93a1a1 brcyan   
+"base2     #eee8d5 white    
+"base3     #fdf6e3 brwhite  
+"yellow    #b58900 yellow   
+"orange    #cb4b16 brred    
+"red       #dc322f red      
+"magenta   #d33682 magenta  
+"violet    #6c71c4 brmagenta
+"blue      #268bd2 blue     
+"cyan      #2aa198 cyan     
+"green     #859900 green    
+" syn match Dash "[\-]"
+" " " "" }}}
+" " "" general {{{
+"
+nmap <c-j> /\v^(\*<Bar>#)<cr>:noh<cr>
+nmap <c-k> ?\v^(\*<Bar>#)<cr>:noh<cr>
 
 let g:colors_name = "larry-dark-solarized"
-hi clear SpellBad
-hi SpellBad cterm=underline
+" hi clear SpellBad
+hi SpellBad gui=undercurl
 
 hi Visual guibg=#424242 gui=bold
-hi CursorLine gui=bold guibg=#282828
+hi CursorLine guibg=#282828 gui=bold 
 hi LineNr guifg=#cb4b16
 hi CursorLineNr guifg=#b58900
+
+" Pmenu – normal item
+
+" PmenuThumb – thumb of the scrollbar
+hi Pmenu guibg=#424242 
+" PmenuSbar – scrollbar
+hi PmenuThumb guibg=#424242
+" PmenuSel – selected item
+hi PmenuSbar guibg=#666353 guifg=#5F9EA0
+hi PmenuSel guibg=#666353 guifg=#5F9EA0
 
 "" }}}
 "" markdown headings {{{
 
-highlight markdownHeadingDelimiter guifg=#005f87
-highlight markdownCodeDelimiter guifg=#005f87
-highlight markdownH1 guifg=#af0087 gui=italic gui=bold
-highlight markdownH2 guifg=#5f00af gui=italic gui=bold
-highlight markdownH2 guifg=#af0087 gui=italic gui=bold
-highlight markdownH3 guifg=#d75f00 gui=italic gui=bold
-highlight markdownH4 guifg=#af0087 gui=italic gui=bold
+hi markdownHeadingDelimiter guifg=#af005f
+hi markdownCodeDelimiter guifg=#005f87
+hi markdownH1 guifg=#5F9EA0 gui=italic gui=bold
+hi markdownH2 guifg=#d75f00 gui=italic gui=bold
+hi markdownH3 guifg=#5F9EA0 gui=italic gui=bold
+hi markdownH4 guifg=#d75f00 gui=italic gui=bold
+hi markdownH5 guifg=#5F9EA0 gui=italic gui=bold
 
 " }}}
 "" markdown & todo {{{
 
 " https://stackoverflow.com/questions/2211477/how-can-i-use-variables-to-dry-up-vim-colorthemes
-
-let NormalYellow='#ffaf00'
-    exe 'hi Normal guifg='. NormalYellow
 
 hi Normal guibg=#282828
 hi Comment gui=italic
@@ -60,7 +88,7 @@ highlight asciiDiagram guifg=#005f87
 highlight LarryMultiIndent guifg=#005f87
 highlight markdownSectionMarker guifg=#005f87
 highlight tinyDot guifg=#005f87
-highlight rQuestion guifg=#af005f
+highlight rQuestion guifg=#af0087
 highlight rFrontSlash guifg=#5F9EA0
 highlight rSemicolon guifg=#5F9EA0
 highlight rApostrophe guifg=#5F9EA0
@@ -70,44 +98,9 @@ highlight rTilde guifg=#005f87
 highlight rUnderscore guifg=#8c610b
 highlight markdownItalicDelimiter guifg=#8c610b
 highlight markdownBoldDelimiter guifg=#005f87
-highlight markdownLink guifg=#e09c14
-highlight markdownLink gui=italic
 highlight markdownLink gui=italic
 
 " syntax keyword letter 𝑉 𝑤 𝑾 î 𝒗 φ θ
-
-"" }}}
-"" R {{{
-
-highlight rDollar guifg=#0087d7
-highlight rFloat guifg=#0087d7
-highlight rPipe guifg=#0087d7
-highlight rNumber guifg=#0087d7
-highlight rPeriod guifg=#005f87
-highlight rColon guifg=#0087d7
-highlight rBrackets guifg=#005f5f 
-highlight rParen guifg=#af005f 
-highlight rAssign guifg=#005f00
-highlight rDelimiter guifg=#8700af
-highlight rComment guifg=#008787 
-highlight rString guifg=#008787
-highlight rOperator guifg=#008700
-highlight rKeyword guifg=#d75f00
-highlight rCurly guifg=#d75f00
-highlight rType guifg=#d75f00
-
-"" }}}
-"" Mathematica {{{
-
-highlight mmaDollar ctermfg=32
-highlight mmaBrackets ctermfg=161
-highlight markdownHilightmma ctermfg=23
-highlight mmaComma ctermfg=91
-highlight mmaCurly ctermfg=202
-highlight mmaOperator ctermfg=12
-highlight mmaNumber ctermfg=38
-highlight mmaGenericFunction ctermfg=32
-highlight mmaParen ctermfg=166
 
 "" }}}
 "" Python {{{
@@ -128,17 +121,16 @@ highlight pythonBrackets guifg=#005f87
 "" }}}
 "" Line number and tags {{{
 
-hi TabLine guibg=#282828 guifg=#fbf1c7 gui=None
-hi TabLineSel   guibg=#282828 gui=bold gui=bold
-hi TabLineFill  guibg=#282828 gui=none cterm=none
-highlight LineNr ctermbg=none
+hi TabLine guibg=#282828 guifg=#005f87 gui=italic
+hi TabLineSel   guibg=#282828 gui=bold 
+hi TabLineFill  guibg=#282828 gui=none 
 
 "}}}
 "" Folds {{{
 
 " hi FoldColumn guifg=#fbf1c7 guibg=#282828
 highlight Folded guibg=#282828
-highlight Folded guifg=#ab7500
+highlight Folded guifg=  #4d797a
 " hi Folded guifg=#839496 guibg=none
 
 "" }}}
