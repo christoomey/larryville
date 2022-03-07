@@ -27,11 +27,8 @@ hi NonText guifg=#262626
 "" Punctuation {{{
 
 syn match Dash "[\-]"
-    hi Dash guifg = #5F9EA0
 syn match Apostrophe "[\']" 
-    hi Apostrophe guifg = #5F9EA0
 syn match rParen "[(|)]" 
-    hi rParen guifg = #af005f 
 
 syn match asciiDiagram /\v[│┌─┐┬└┘┴┤┼├]/
 syn match rUnderscore "[\_]" 

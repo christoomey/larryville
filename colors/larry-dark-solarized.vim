@@ -5,43 +5,18 @@
 "  Colours are light’s suffering and joy.
 "      ~ Goethe
 
-" pink = #af005f
-"SOLARIZED HEX     TERMCOL  
-"--------- ------- -------  
-"base03    #002b36 brblack  
-"base02    #073642 black    
-"base01    #586e75 brgreen  
-"base00    #657b83 bryellow 
-"base0     #839496 brblue   
-"base1     #93a1a1 brcyan   
-"base2     #eee8d5 white    
-"base3     #fdf6e3 brwhite  
-"yellow    #b58900 yellow   
-"orange    #cb4b16 brred    
-"red       #dc322f red      
-"magenta   #d33682 magenta  
-"violet    #6c71c4 brmagenta
-"blue      #268bd2 blue     
-"cyan      #2aa198 cyan     
-"green     #859900 green    
-" syn match Dash "[\-]"
 " " " "" }}}
 " " "" general {{{
-"
-nmap <c-j> /\v^(\*<Bar>#)<cr>:noh<cr>
-nmap <c-k> ?\v^(\*<Bar>#)<cr>:noh<cr>
 
 let g:colors_name = "larry-dark-solarized"
-" hi clear SpellBad
-hi SpellBad gui=undercurl
 
+" hi clear SpellBad
+hi SpellBad gui=italic
 hi Visual guibg=#424242 gui=bold
-hi CursorLine guibg=#282828 gui=bold 
+hi CursorLine guibg=#1d1e1f gui=bold 
 hi LineNr guifg=#cb4b16
 hi CursorLineNr guifg=#b58900
-
 " Pmenu – normal item
-
 " PmenuThumb – thumb of the scrollbar
 hi Pmenu guibg=#424242 
 " PmenuSbar – scrollbar
@@ -64,20 +39,22 @@ hi markdownH5 guifg=#5F9EA0 gui=italic gui=bold
 " }}}
 "" markdown & todo {{{
 
+
 " https://stackoverflow.com/questions/2211477/how-can-i-use-variables-to-dry-up-vim-colorthemes
 
-hi Normal guibg=#282828
 hi Comment gui=italic
 
 highlight qfFileName guifg=#ffaf00
 highlight todoTerm guifg=#af5f00
 highlight markdownListMarker guifg=#008700
-highlight astericLine guifg=#d75f00 
+highlight astericLine guifg=#E67F2E
 highlight LarryAsteric guifg=#d70087
+highlight  rCurly guifg=#E67F2E
+hi rParen guifg = #AF236F
 highlight larryTilde guifg=#af0087
 highlight todoTerm guifg=#008700
 highlight TodoChar cterm=bold term=bold guifg=#005f87
-highlight microProject  guifg=#af005f
+highlight microProject  guifg=#AF236F
 highlight markdownError guifg=NONE
 highlight htmlBold guifg=NONE
 highlight TodoChar cterm=bold term=bold guifg=#008787
@@ -99,6 +76,8 @@ highlight rUnderscore guifg=#8c610b
 highlight markdownItalicDelimiter guifg=#8c610b
 highlight markdownBoldDelimiter guifg=#005f87
 highlight markdownLink gui=italic
+hi Dash guifg = #5F9EA0
+hi Apostrophe guifg = #5F9EA0
 
 " syntax keyword letter 𝑉 𝑤 𝑾 î 𝒗 φ θ
 
@@ -113,25 +92,32 @@ highlight pythonConstant guifg=#d75f00
 highlight pythonExtraOperator guifg=#af0087
 highlight pythonConditional guifg=#d70000
 highlight pythonRepeat guifg=#d75f00
-highlight pythonParen guifg=#008700
+highlight pythonParen guifg=#AF236F
 highlight pythonString guifg=#ffaf00
 highlight pythonNumber guifg=#0087d7
 highlight pythonBrackets guifg=#005f87
 
 "" }}}
+"" Mathematica {{{
+
+" stored in mma.vim
+
+"" }}}
 "" Line number and tags {{{
 
-hi TabLine guibg=#282828 guifg=#005f87 gui=italic
-hi TabLineSel   guibg=#282828 gui=bold 
-hi TabLineFill  guibg=#282828 gui=none 
+hi TabLine guibg=#1d1e1f guifg=#005f87 gui=italic
+hi TabLineSel   guibg=#1d1e1f gui=bold 
+hi TabLineFill  guibg=#1d1e1f gui=none 
+hi normal guibg= #1d1e1f
+hi normal guifg=#f2b61d
+
+" hi Normal guibg= #1d1e1f
 
 "}}}
 "" Folds {{{
 
-" hi FoldColumn guifg=#fbf1c7 guibg=#282828
-highlight Folded guibg=#282828
+highlight Folded guibg=#1d1e1f
 highlight Folded guifg=  #4d797a
-" hi Folded guifg=#839496 guibg=none
-
+set conceallevel=0
 "" }}}
 

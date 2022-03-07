@@ -4,12 +4,16 @@ syn match mmaBrackets "[\[\]]" "contained skipwhite
 syn match mmaCurly "[\{\}]" "contained skipwhite
 syn match mmaComma "[,]" "contained skipwhite
 
-hi mmaDollar guifg=#005f87
-hi mmaGenericFunction guifg=#5F9EA0
-hi mmaBrackets guifg=#af0087
-hi markdownHilightmma guifg=#008700
-hi mmaComma guifg=#b58900
-hi mmaCurly guifg=#008700
-hi mmaOperator guifg=#005f87
-hi mmaNumber guifg=#ffaf00
-hi mmaParen guifg=#cb4b16
+highlight mmaBrackets guifg= #A62188
+highlight mmaGenericFunction guifg=#609fa0 gui=italic
+highlight mmaParen guifg= #B42B5A
+highlight mmaCurly guifg= #C65728
+highlight markdownHighlightmma guifg= #D99920
+highlight mmaNumber guifg=#D99920
+highlight mmaVariable guifg=#859900
+highlight mmaOperator guifg=#339dc9
+highlight mmaError guifg=NONE
+highlight mmaPattern guifg=#89991F
+highlight mmaString guifg=#89991f
+syntax match mmaComment "\v\(\*.*$"
+highlight mmaComment guifg=#b58900
