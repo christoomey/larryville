@@ -1,9 +1,9 @@
-
-syn match rParen "[(|)]" "contained skipwhite
-syn match rBrackets "[\[\]]" "contained skipwhite
-syn match rCurly "[\{\}]" "contained skipwhite
-syn match rPipe "[\%\>\%]" "contained skipwhite
-syn match rAsteric "\*" "contained skipwhite
+syn match rParen "[\(|\)]" 
+syn match rBrackets "[\[\]]" 
+syn match rCurly "[\{\}]" 
+syn match rPipe "[\%\>\%]" 
+syn match rPipe "[\>]" 
+syn match rAsteric "\*" 
 
 hi link juliaComma rColon
 highlight juliaMacro guifg=#008700
@@ -23,11 +23,12 @@ syntax match lcom "<<" conceal cchar=«
 syntax match lambda "\\" conceal cchar=λ
 syntax match cons "::" conceal cchar=∷
 syntax match parse1 "|=" conceal cchar=⊧
-syntax match parse2 "|." conceal cchar=⊦
+" syntax match parse2 "|." conceal cchar=⊦
 syntax match neq "/=" conceal cchar=≠
 
 syn keyword rKeyword pbinom dbinom rbinom
 
+highlight parse2 guifg=#0087d7
 highlight rParen guifg=#0087d7
 highlight rAsteric guifg=#0087d7
 highlight rDollar guifg=#0087d7

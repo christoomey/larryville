@@ -10,9 +10,22 @@
 
 let g:colors_name = "larry-dark-solarized"
 
-" hi clear SpellBad
+hi clear SpellBad
 hi SpellBad gui=italic
-hi Visual guibg=#424242 gui=bold
+highlight SpellBad guifg=#008787
+highlight SpellBad guibg=NONE
+
+hi markdownLink guifg = #EBB347
+hi Error NONE
+hi ErrorMsg NONE
+au GuiEnter * hi Error NONE
+au GuiEnter * hi ErrorMsg NONE
+
+"896232
+hi Normal guifg=#1d1e1f
+
+" hi SpellBad guibg=#424242
+hi Visual guibg=#896232 gui=bold
 hi CursorLine guibg=#1d1e1f gui=bold 
 hi LineNr guifg=#cb4b16
 hi CursorLineNr guifg=#b58900
@@ -43,14 +56,14 @@ hi markdownH5 guifg=#5F9EA0 gui=italic gui=bold
 " https://stackoverflow.com/questions/2211477/how-can-i-use-variables-to-dry-up-vim-colorthemes
 
 hi Comment gui=italic
-
+highlight Normal ctermbg=Blue
 highlight qfFileName guifg=#ffaf00
 highlight todoTerm guifg=#af5f00
 highlight markdownListMarker guifg=#008700
 highlight astericLine guifg=#E67F2E
 highlight LarryAsteric guifg=#d70087
 highlight  rCurly guifg=#E67F2E
-hi rParen guifg = #AF236F
+hi rParen guifg = #af005f
 highlight larryTilde guifg=#af0087
 highlight todoTerm guifg=#008700
 highlight TodoChar cterm=bold term=bold guifg=#005f87
@@ -109,7 +122,7 @@ hi TabLine guibg=#1d1e1f guifg=#005f87 gui=italic
 hi TabLineSel   guibg=#1d1e1f gui=bold 
 hi TabLineFill  guibg=#1d1e1f gui=none 
 hi normal guibg= #1d1e1f
-hi normal guifg=#f2b61d
+hi normal guifg=#e09c14
 
 " hi Normal guibg= #1d1e1f
 
@@ -118,6 +131,13 @@ hi normal guifg=#f2b61d
 
 highlight Folded guibg=#1d1e1f
 highlight Folded guifg=  #4d797a
+
+" syntax match Dash '-' conceal cchar=•
+
+syntax match markdownLink 'https:\/\/docs\.google\.com\/spreadsheets' conceal cchar=o 
+
 set conceallevel=0
+set concealcursor=nc linebreak
+
 "" }}}
 

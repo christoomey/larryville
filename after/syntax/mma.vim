@@ -4,10 +4,20 @@ syn match mmaBrackets "[\[\]]" "contained skipwhite
 syn match mmaCurly "[\{\}]" "contained skipwhite
 syn match mmaComma "[,]" "contained skipwhite
 
+
+syn match mmaPureFunction "[\&\#]" "contained skipwhite
+
+syn match Pipe "|>"
+syn match Pipe "<|"
+    hi Pipe guifg=#e67f2e
+
 highlight mmaBrackets guifg= #A62188
 highlight mmaGenericFunction guifg=#609fa0 gui=italic
+
+
 highlight mmaParen guifg= #B42B5A
 highlight mmaCurly guifg= #C65728
+
 highlight markdownHighlightmma guifg= #D99920
 highlight mmaNumber guifg=#D99920
 highlight mmaVariable guifg=#859900
