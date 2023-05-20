@@ -19,7 +19,6 @@ syn clear markdownCodeBlock
 " highlight EndOfBuffer guifg=NONE
 highlight! EndOfBuffer guibg=bg guifg=bg
 
-hi Normal guifg=#D4B379
 "hi Normal guifg=#f0C674
 "gruvbox
 "hi Normal guifg=#D4BE99
